@@ -1,0 +1,62 @@
+namespace castom1
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter triple number");
+            var num = Console.ReadLine();
+            int c = Convert.ToInt32(num);
+            if (c > 999)
+            {
+                Console.WriteLine("more than 3"); // 
+            }
+            else
+            {
+                if ((c > 99) & (c <= 999))
+                {                                //from 100 to 999
+                    int hundred = c / 100;
+                    int ten =(c / 10) % 10;
+                    int alo = c % 10;
+                    
+                    if (( hundred >= ten) & (hundred >= alo)){
+                        Console.WriteLine(hundred + " is bigger bumber");           //out
+                    }else
+                        if((ten >= hundred) & (ten >= alo))
+                    {
+                        Console.WriteLine(ten + " is bigger bumber");             //out
+                    }else
+                        if ((alo >= ten) & (alo >= hundred))
+                    {
+                        Console.WriteLine(alo + " is bigger bumber");            // out
+                    }
+
+                }
+                else
+                    if (c <= 99 & c > 9)        //from 10 to 99
+                {
+                    int ten2 = c / 10;
+                    int alo2 = c % 10;
+                    
+                    if (ten2 >= alo2)
+                    {
+                        Console.WriteLine(ten2 + " is bigger bumber");      // out
+                    }
+                    else
+                    {
+                        Console.WriteLine(alo2 + " is bigger bumber");      //out
+                    }
+                    
+                }
+                else
+                    if (c <= 9 & c >= 0)          //from 1 to 9
+                {
+                    Console.WriteLine(c + " it is alone nuber");        //out
+                }
+                else
+                    Console.WriteLine(c + " is negative number");       //out
+            }
+
+        }
+    }
+}
